@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Wed Nov 27 13:12:26 2019
-
-@author: mgejl
-"""
-
 import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
@@ -111,9 +104,8 @@ def violin_plt(fil, y):
     
     plt.tight_layout()
     plt.grid(axis='y')
-    plt.savefig( 'grafer/violinplots/Violin-plot-over-internationalt-omdoemme--' + ordbog[y]  + '.pdf' )
     plt.show()
     
 
 file = pd.read_csv( 'players_20.csv', sep= ',' )
-violin_plt(file, 'overall')
+violin_plt(file, 'overall')#'overall'#'potential'#'value_eur'#'wage_eur'
