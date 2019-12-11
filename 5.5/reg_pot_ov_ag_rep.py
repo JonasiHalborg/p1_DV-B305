@@ -27,5 +27,4 @@ for i in range(5):
 
 plt.tight_layout()
 plt.grid()
-#plt.savefig('grafer/regression/reg_pot_ov_ag_rep.pdf')
 plt.show()
