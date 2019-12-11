@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Wed Nov 27 22:49:58 2019
-
-@author: mgejl
-"""
-
 import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
@@ -90,7 +83,6 @@ def fig_plot_avg(fil, x, y):
         axes[c,d].plot( data[i] - datastd[i], 'b:' )
         axes[c,d].set_title( 'Internationalt omdoemme: ' + str(i+1) )
         axes[c,d].plot( xax, yax, alpha = 0 )
-#        plt.xlabel( 'Internationalt omdoemme: ' + str(i+1), fontsize=12 )
         axes[c,d].grid( True )
     
     if len(data) < a * b:
@@ -100,7 +92,6 @@ def fig_plot_avg(fil, x, y):
     fig.text(0.001, 0.5, ordbog[y], va='center', rotation='vertical')
     fig.text(0.5, 0.02, ordbog[x], va='center', rotation='horizontal')
     fig.tight_layout()
-    plt.savefig( 'Grafer/AverageIntRepPlots/avg-intrep-' + ordbog[y]  + '-over-age.pdf' )
     plt.show()
 
 file = pd.read_csv( 'players_20.csv', sep= ',' )
