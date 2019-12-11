@@ -47,5 +47,4 @@ for item in leg.legendHandles:
 fig.delaxes(axes[2,1])
 fig.text(0.001, 0.5, 'Observeret værdi i mio. euro', va='center', rotation='vertical')
 fig.text(0.4, 0.02, 'Modelleret værdi i mio. euro', va='center', rotation='horizontal')
-#plt.savefig('grafer/regression/reg_pot_ov_ag_sep_rep.pdf')
 plt.show()
