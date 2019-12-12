@@ -15,7 +15,7 @@ plt.xlabel('Modelleret værdi i euro')
 plt.ylabel('Observeret værdi i euro')
 plt.grid()
 
-#Nedenunder er plot koden for at få minustal til at stå på venstre side af y-aksen.
+#Nedenunder er koden for at få minustal til at stå på venstre side af y-aksen.
 ax = plt.gca()
 ax.spines['right'].set_color('none')
 ax.spines['top'].set_color('none')
