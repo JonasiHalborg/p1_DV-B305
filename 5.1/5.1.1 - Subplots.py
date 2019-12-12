@@ -16,6 +16,7 @@ def subplot6grouped(fil, x, y):
         y_value= file.groupby([x])[y[i]].mean()
         staf = file.groupby([x])[y[i]].std()
         
+        #a og b bestemmer hvilket plot der bruges
         if i != 0:
             a += 1
         
@@ -34,6 +35,7 @@ def subplot6grouped(fil, x, y):
 
     fig.legend(['Gennemsnit + 1 Standardafvigelse', 'Gennemsnit', 'Gennemsnit - 1 Standardafvigelse'], loc=9, borderaxespad=0.001, framealpha=0)
     
+    plt.show()
 
 subplot6grouped('players_20.csv', 'age', ['pace','shooting', 'passing', 'dribbling', 'defending', 'physic'])
 
