@@ -127,8 +127,6 @@ def exp_groupoverall_rc():
     z = np.polyfit(x, y, 1)
     a, b = z
 
-    # print("R^2 = ", np.corrcoef(x, y)[0,1]**2) # Shits ain't working
-
     reg_a, reg_b = np.exp([a, b])
 
     def f(t):
@@ -180,22 +178,14 @@ def valuewage():
 
     grouped_value = f20_1e6.groupby(["value_eur"])["release_clause_eur"].mean()
     grouped_wage = f20_1e6.groupby(["wage_eur"])["release_clause_eur"].mean()
-    standard_value = f20_1e6.groupby(["value_eur"])["release_clause_eur"].std()
-    standard_wage = f20_1e6.groupby(["wage_eur"])["release_clause_eur"].std()
-
 
     ax1.plot(grouped_value, "b.")
-    # ax1.plot(grouped_value + standard_value, "b-", alpha=0.5)
-    # ax1.plot(grouped_value - standard_value, "b-", alpha=0.5)
     ax1.grid(True)
     ax1.set_xlabel("Værdi i mio. €")
     ax1.legend(["Værdi"])
 
     ax2.plot(grouped_wage, "b.")
-    # ax2.plot(grouped_wage + standard_wage, "b-", alpha=0.5)
-    # ax2.plot(grouped_wage - standard_wage, "b-", alpha=0.5)
     ax2.grid(True)
     ax2.set_xlabel("Løn i €")
     ax2.legend(["Løn"])
     plt.show()
-
